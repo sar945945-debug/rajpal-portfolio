@@ -1,0 +1,3371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rajpal | Data Analyst & App Developer</title>
+
+<meta name="description"
+content="Rajpal - Data Analyst and App Developer portfolio. Python, SQL, Power BI, Excel and data visualization projects.">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --navy:#071426;
+    --navy-2:#0d2038;
+    --navy-3:#142b48;
+
+    --gold:#c99a2e;
+    --gold-light:#e8cc78;
+    --gold-soft:#fbf5e6;
+
+    --white:#ffffff;
+    --light:#f7f8fa;
+    --light-2:#eef1f5;
+
+    --text:#172131;
+    --muted:#687386;
+
+    --border:#e4e8ed;
+
+    --shadow:0 18px 50px rgba(7,20,38,.08);
+    --shadow-dark:0 25px 65px rgba(0,0,0,.22);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--white);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.container{
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-heading{
+    margin-bottom:50px;
+}
+
+.section-label{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.section-heading h2{
+    color:var(--navy);
+    font-size:44px;
+    line-height:1.1;
+    letter-spacing:-1.2px;
+}
+
+.section-heading p{
+    max-width:680px;
+    color:var(--muted);
+    margin-top:14px;
+    font-size:15px;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:2000;
+
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(7,20,38,.08);
+}
+
+.nav-container{
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+
+    min-height:72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:var(--navy);
+    font-size:26px;
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    position:relative;
+
+    color:#4b5666;
+    font-size:13px;
+    font-weight:800;
+
+    padding:8px 0;
+
+    transition:.3s;
+}
+
+.nav-links a::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:0;
+
+    width:0;
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.menu-button{
+    display:none;
+
+    border:0;
+    background:transparent;
+
+    color:var(--navy);
+    font-size:26px;
+
+    cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+    min-height:720px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(201,154,46,.15),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(7,20,38,.035),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f7f9fb
+        );
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    right:-200px;
+    top:-170px;
+
+    border:1px solid rgba(201,154,46,.14);
+    border-radius:50%;
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    left:-130px;
+    bottom:-150px;
+
+    border:1px solid rgba(7,20,38,.07);
+    border-radius:50%;
+}
+
+.hero-container{
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.12fr .88fr;
+
+    gap:70px;
+    align-items:center;
+
+    padding:80px 0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+}
+
+.hero-label{
+    color:var(--gold);
+
+    font-size:13px;
+    font-weight:900;
+
+    letter-spacing:2.6px;
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+}
+
+.hero h1{
+    color:var(--navy);
+
+    font-size:clamp(48px,6vw,78px);
+
+    line-height:.98;
+
+    letter-spacing:-3.5px;
+
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-subtitle{
+    color:#3f4c5d;
+
+    font-size:21px;
+    font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.hero-description{
+    max-width:650px;
+
+    color:var(--muted);
+
+    font-size:16px;
+
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:45px;
+
+    padding:12px 22px;
+
+    border-radius:7px;
+
+    font-size:13px;
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:
+        transform .3s,
+        box-shadow .3s,
+        background .3s,
+        border .3s,
+        color .3s;
+}
+
+.btn-gold{
+    color:white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            #b7891f
+        );
+
+    box-shadow:
+        0 10px 25px rgba(201,154,46,.20);
+}
+
+.btn-gold:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 16px 34px rgba(201,154,46,.30);
+}
+
+.btn-outline{
+    color:var(--navy);
+
+    background:white;
+
+    border:1px solid #d4d9df;
+}
+
+.btn-outline:hover{
+    color:var(--gold);
+
+    border-color:var(--gold);
+
+    transform:translateY(-3px);
+}
+
+/* =========================================================
+   HERO PHOTO
+========================================================= */
+
+.hero-photo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    z-index:5;
+}
+
+.photo-ring{
+    width:370px;
+    height:370px;
+
+    padding:8px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            white,
+            var(--gold-light),
+            white,
+            var(--gold)
+        );
+
+    box-shadow:
+        0 0 0 10px rgba(201,154,46,.055),
+        0 28px 70px rgba(7,20,38,.16);
+
+    animation:
+        photoFloat 5s ease-in-out infinite;
+}
+
+.photo-inner{
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    border-radius:50%;
+
+    background:#edf0f3;
+}
+
+.photo-inner img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center 24%;
+}
+
+@keyframes photoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    background:var(--light);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.78fr 1.22fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+.about-image{
+    padding:7px;
+
+    border-radius:21px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            transparent 65%
+        );
+
+    box-shadow:var(--shadow);
+}
+
+.about-image img{
+    width:100%;
+    height:430px;
+
+    object-fit:cover;
+    object-position:center 24%;
+
+    border-radius:16px;
+}
+
+.about-content h3{
+    color:var(--navy);
+
+    font-size:30px;
+
+    margin-bottom:17px;
+}
+
+.about-content p{
+    color:var(--muted);
+
+    font-size:15px;
+
+    margin-bottom:15px;
+}
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:13px;
+
+    margin-top:26px;
+}
+
+.info-box{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:16px;
+
+    transition:.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-3px);
+
+    border-color:var(--gold-light);
+
+    box-shadow:
+        0 12px 25px rgba(7,20,38,.05);
+}
+
+.info-box strong{
+    display:block;
+
+    color:var(--navy);
+
+    font-size:12px;
+}
+
+.info-box span{
+    display:block;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+    margin-top:2px;
+}
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:17px;
+}
+
+.skill-card{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:13px;
+
+    padding:25px 20px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.skill-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:80px;
+    height:80px;
+
+    right:-45px;
+    top:-45px;
+
+    border-radius:50%;
+
+    background:var(--gold-soft);
+}
+
+.skill-card:hover{
+    transform:translateY(-6px);
+
+    border-color:var(--gold-light);
+
+    box-shadow:
+        0 18px 38px rgba(7,20,38,.08);
+}
+
+.skill-icon{
+    width:46px;
+    height:46px;
+
+    border-radius:11px;
+
+    background:var(--gold-soft);
+
+    color:var(--gold);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:13px;
+    font-weight:900;
+
+    margin-bottom:15px;
+
+    position:relative;
+    z-index:2;
+}
+
+.skill-card h3{
+    color:var(--navy);
+
+    font-size:17px;
+
+    position:relative;
+    z-index:2;
+}
+
+.skill-card p{
+    color:var(--muted);
+
+    font-size:13px;
+
+    margin-top:4px;
+
+    position:relative;
+    z-index:2;
+}
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects{
+    background:var(--navy);
+}
+
+.projects .section-heading h2{
+    color:white;
+}
+
+.projects .section-heading p{
+    color:#b9c3d0;
+}
+
+.project-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:25px;
+}
+
+.project-card{
+    overflow:hidden;
+
+    background:white;
+
+    border-radius:16px;
+
+    transition:.35s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-dark);
+}
+
+.project-image{
+    height:260px;
+
+    background:var(--light-2);
+
+    overflow:hidden;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.project-card:hover .project-image img{
+    transform:scale(1.035);
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-tag{
+    color:var(--gold);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:1.7px;
+}
+
+.project-content h3{
+    color:var(--navy);
+
+    font-size:22px;
+
+    margin:7px 0 9px;
+}
+
+.project-content p{
+    color:var(--muted);
+
+    font-size:14px;
+
+    margin-bottom:19px;
+}
+
+.project-actions{
+    display:flex;
+    gap:9px;
+    flex-wrap:wrap;
+}
+
+.project-link{
+    display:inline-flex;
+
+    padding:9px 13px;
+
+    border-radius:6px;
+
+    background:#f3f5f7;
+
+    color:var(--navy);
+
+    font-size:12px;
+    font-weight:900;
+
+    transition:.25s;
+}
+
+.project-link:hover{
+    color:white;
+
+    background:var(--gold);
+}
+
+/* =========================================================
+   APP SHOWCASE
+========================================================= */
+
+.app-showcase{
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-dark);
+}
+
+.app-image{
+    min-height:450px;
+
+    background:#edf0f4;
+
+    overflow:hidden;
+}
+
+.app-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.app-showcase:hover .app-image img{
+    transform:scale(1.025);
+}
+
+.app-content{
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.app-tag{
+    color:var(--gold);
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:1.7px;
+}
+
+.app-content h3{
+    color:var(--navy);
+
+    font-size:34px;
+
+    margin:10px 0 15px;
+}
+
+.app-content p{
+    color:var(--muted);
+
+    margin-bottom:25px;
+}
+
+.app-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.timeline{
+    max-width:850px;
+
+    border-left:2px solid #e5e8ed;
+
+    margin-left:10px;
+
+    padding-left:31px;
+}
+
+.timeline-item{
+    position:relative;
+
+    margin-bottom:38px;
+}
+
+.timeline-item:last-child{
+    margin-bottom:0;
+}
+
+.timeline-item::before{
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+    height:12px;
+
+    left:-38px;
+    top:7px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    box-shadow:
+        0 0 0 5px var(--gold-soft);
+}
+
+.timeline-date{
+    color:var(--gold);
+
+    font-size:11px;
+    font-weight:900;
+
+    letter-spacing:1.3px;
+}
+
+.timeline-item h3{
+    color:var(--navy);
+
+    font-size:22px;
+
+    margin:4px 0;
+}
+
+.timeline-item p{
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.education{
+    background:var(--light);
+}
+
+.education-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+}
+
+.education-card{
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:13px;
+
+    padding:28px;
+
+    transition:.3s;
+}
+
+.education-card:hover{
+    transform:translateY(-5px);
+
+    border-color:var(--gold-light);
+
+    box-shadow:var(--shadow);
+}
+
+.education-year{
+    color:var(--gold);
+
+    font-size:12px;
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+.education-card h3{
+    color:var(--navy);
+
+    font-size:20px;
+
+    margin:8px 0;
+}
+
+.education-card p{
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* =========================================================
+   CERTIFICATE
+========================================================= */
+
+.certificate-grid{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:30px;
+
+    align-items:center;
+}
+
+.certificate-preview{
+    padding:10px;
+
+    background:#fafafa;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+}
+
+.certificate-preview iframe{
+    width:100%;
+    height:450px;
+
+    border:0;
+
+    border-radius:9px;
+}
+
+.certificate-content h3{
+    color:var(--navy);
+
+    font-size:30px;
+
+    margin-bottom:15px;
+}
+
+.certificate-content p{
+    color:var(--muted);
+
+    font-size:15px;
+
+    margin-bottom:15px;
+}
+
+.certificate-id{
+    display:inline-block;
+
+    background:var(--gold-soft);
+
+    color:var(--navy);
+
+    border-radius:7px;
+
+    padding:9px 13px;
+
+    font-size:13px;
+    font-weight:800;
+
+    margin-bottom:20px;
+}
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.resume-section{
+    background:var(--light);
+}
+
+.resume-box{
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(201,154,46,.18),
+            transparent 30%
+        ),
+        var(--navy);
+
+    border-radius:18px;
+
+    padding:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+    box-shadow:var(--shadow);
+}
+
+.resume-box h2{
+    color:white;
+
+    font-size:30px;
+
+    line-height:1.2;
+}
+
+.resume-box p{
+    color:#b9c3d0;
+
+    margin-top:8px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:50px;
+}
+
+.contact-info h3{
+    color:var(--navy);
+
+    font-size:30px;
+
+    margin-bottom:11px;
+}
+
+.contact-info > p{
+    color:var(--muted);
+
+    margin-bottom:26px;
+}
+
+.contact-item{
+    display:flex;
+
+    gap:14px;
+
+    margin-bottom:18px;
+}
+
+.contact-icon{
+    flex:0 0 42px;
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:9px;
+
+    background:var(--gold-soft);
+
+    color:var(--gold);
+
+    font-size:12px;
+    font-weight:900;
+}
+
+.contact-item strong{
+    display:block;
+
+    color:var(--navy);
+
+    font-size:12px;
+}
+
+.contact-item a,
+.contact-item span{
+    color:var(--muted);
+
+    font-size:14px;
+
+    word-break:break-word;
+}
+
+.contact-item a:hover{
+    color:var(--gold);
+}
+
+.socials{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin-top:26px;
+}
+
+.social-link{
+    padding:10px 15px;
+
+    border:1px solid var(--border);
+
+    border-radius:7px;
+
+    color:var(--navy);
+
+    font-size:12px;
+    font-weight:900;
+
+    transition:.25s;
+}
+
+.social-link:hover{
+    color:white;
+
+    background:var(--gold);
+
+    border-color:var(--gold);
+
+    transform:translateY(-2px);
+}
+
+.contact-card{
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--navy);
+
+    border-radius:17px;
+
+    padding:43px;
+}
+
+.contact-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    right:-110px;
+    top:-110px;
+
+    border:1px solid rgba(201,154,46,.25);
+
+    border-radius:50%;
+}
+
+.contact-card h3{
+    position:relative;
+
+    color:white;
+
+    font-size:27px;
+
+    margin-bottom:13px;
+}
+
+.contact-card p{
+    position:relative;
+
+    color:#b9c3d0;
+
+    margin-bottom:25px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#040c17;
+
+    color:#9da8b7;
+
+    text-align:center;
+
+    padding:32px 20px;
+
+    font-size:13px;
+}
+
+footer strong{
+    color:white;
+}
+
+.footer-gold{
+    color:var(--gold);
+}
+
+/* =========================================================
+   INTRO SCREEN
+========================================================= */
+
+.intro-screen{
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--navy);
+
+    pointer-events:none;
+
+    animation:
+        introFade 3s forwards;
+}
+
+.intro-content{
+    position:relative;
+
+    z-index:3;
+
+    text-align:center;
+
+    color:white;
+
+    animation:
+        introText 2.5s ease forwards;
+}
+
+.intro-small{
+    color:#c7cdd5;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+.intro-line{
+    width:70px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:15px auto;
+}
+
+.intro-content h2{
+    font-size:36px;
+
+    letter-spacing:-1px;
+}
+
+.intro-flower{
+    position:absolute;
+
+    color:var(--gold-light);
+
+    font-size:25px;
+
+    opacity:0;
+
+    animation:
+        flowerMove 2.5s ease-out forwards;
+}
+
+.flower-1{
+    left:12%;
+    top:25%;
+    animation-delay:.1s;
+}
+
+.flower-2{
+    left:25%;
+    top:70%;
+    animation-delay:.25s;
+}
+
+.flower-3{
+    left:48%;
+    top:15%;
+    animation-delay:.35s;
+}
+
+.flower-4{
+    left:72%;
+    top:68%;
+    animation-delay:.15s;
+}
+
+.flower-5{
+    left:86%;
+    top:28%;
+    animation-delay:.4s;
+}
+
+.flower-6{
+    left:58%;
+    top:82%;
+    animation-delay:.2s;
+}
+
+@keyframes flowerMove{
+
+    0%{
+        opacity:0;
+        transform:
+            translateY(40px)
+            rotate(0deg);
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translateY(-130px)
+            rotate(100deg);
+    }
+}
+
+@keyframes introFade{
+
+    0%,78%{
+        opacity:1;
+        visibility:visible;
+    }
+
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+@keyframes introText{
+
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    35%{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+    75%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+
+    transform:
+        translateY(28px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+/* =========================================================
+   TOUCH RIPPLE
+========================================================= */
+
+.touch-ripple{
+    position:fixed;
+
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    background:rgba(201,154,46,.35);
+
+    pointer-events:none;
+
+    z-index:10000;
+
+    transform:translate(-50%,-50%) scale(1);
+
+    animation:ripple .45s ease-out forwards;
+}
+
+@keyframes ripple{
+
+    to{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            scale(8);
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:950px){
+
+    .nav-links{
+        display:none;
+
+        position:absolute;
+
+        left:0;
+        right:0;
+        top:72px;
+
+        padding:22px 25px;
+
+        background:white;
+
+        border-bottom:1px solid var(--border);
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:16px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-button{
+        display:block;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        padding:70px 0;
+    }
+
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .photo-ring{
+        width:310px;
+        height:310px;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .app-showcase{
+        grid-template-columns:1fr;
+    }
+
+    .education-grid{
+        grid-template-columns:1fr;
+    }
+
+    .certificate-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .resume-box{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:560px){
+
+    .container,
+    .nav-container,
+    .hero-container{
+        width:min(100% - 30px,1180px);
+    }
+
+    section{
+        padding:72px 0;
+    }
+
+    .section-heading{
+        margin-bottom:35px;
+    }
+
+    .section-heading h2{
+        font-size:35px;
+    }
+
+    .hero{
+        min-height:680px;
+    }
+
+    .hero h1{
+        font-size:48px;
+
+        letter-spacing:-2.5px;
+    }
+
+    .hero-subtitle{
+        font-size:18px;
+    }
+
+    .hero-description{
+        font-size:14px;
+    }
+
+    .photo-ring{
+        width:255px;
+        height:255px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .skills-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-image{
+        height:215px;
+    }
+
+    .app-image{
+        min-height:270px;
+    }
+
+    .app-content{
+        padding:30px 25px;
+    }
+
+    .app-content h3{
+        font-size:29px;
+    }
+
+    .certificate-preview iframe{
+        height:350px;
+    }
+
+    .resume-box{
+        padding:32px 25px;
+    }
+
+    .resume-box h2{
+        font-size:25px;
+    }
+
+    .contact-card{
+        padding:30px 25px;
+    }
+
+    .intro-content h2{
+        font-size:29px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     ONE-TIME INTRO
+======================================================== -->
+
+<div class="intro-screen">
+
+    <div class="intro-flower flower-1">✦</div>
+    <div class="intro-flower flower-2">✿</div>
+    <div class="intro-flower flower-3">✦</div>
+    <div class="intro-flower flower-4">✿</div>
+    <div class="intro-flower flower-5">✦</div>
+    <div class="intro-flower flower-6">✿</div>
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            Welcome to
+        </div>
+
+        <div class="intro-line"></div>
+
+        <h2>
+            Rajpal's Portfolio
+        </h2>
+
+    </div>
+
+</div>
+
+
+<!-- =======================================================
+     NAVBAR
+======================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#home" class="logo">
+            Raj<span>pal.</span>
+        </a>
+
+        <button
+            type="button"
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open menu">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#certificate">Certificate</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =======================================================
+     HERO
+======================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+        <div class="hero-content reveal">
+
+            <div class="hero-label">
+                Data Analyst & App Developer
+            </div>
+
+            <h1>
+                Hi, I'm <span>Rajpal</span>
+            </h1>
+
+            <div class="hero-subtitle">
+                Turning Data Into Meaningful Insights.
+            </div>
+
+            <p class="hero-description">
+                I work with Python, SQL, Power BI, Excel and data
+                visualization to transform raw data into useful
+                insights and practical digital solutions.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn btn-gold">
+                    View My Work
+                </a>
+
+                <a
+                    href="RAJPAL RESUME PRIMUME.pdf"
+                    target="_blank"
+                    class="btn btn-outline">
+                    View Resume
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo reveal">
+
+            <div class="photo-ring">
+
+                <div class="photo-inner">
+
+                    <img
+                        src="profile.jpg"
+                        alt="Rajpal profile photo">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     ABOUT
+======================================================== -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                About Me
+            </div>
+
+            <h2>
+                Professional Profile
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-image reveal">
+
+                <img
+                    src="profile.jpg"
+                    alt="Rajpal">
+
+            </div>
+
+
+            <div class="about-content reveal">
+
+                <h3>
+                    Data Analyst | App Developer
+                </h3>
+
+                <p>
+                    I am a detail-oriented Data Analyst interested
+                    in transforming data into meaningful business
+                    insights.
+                </p>
+
+                <p>
+                    My technical work includes Python, SQL, Power BI,
+                    Excel, Pandas, NumPy and data visualization.
+                </p>
+
+                <p>
+                    I also build practical applications and enjoy
+                    creating simple technology solutions for students,
+                    beginners and businesses.
+                </p>
+
+
+                <div class="info-grid">
+
+                    <div class="info-box">
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <span>
+                            Nagaur, Rajasthan, India
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <strong>
+                            Education
+                        </strong>
+
+                        <span>
+                            B.A. Pursuing – MDSU
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <strong>
+                            Focus
+                        </strong>
+
+                        <span>
+                            Data Analytics & Applications
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <strong>
+                            Languages
+                        </strong>
+
+                        <span>
+                            Hindi, English, Marathi, Rajasthani
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     SKILLS
+======================================================== -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                My Skills
+            </div>
+
+            <h2>
+                Tools & Technologies
+            </h2>
+
+            <p>
+                Technologies I use for data analysis, visualization,
+                dashboards and application development.
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    Py
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Programming & Data Analysis
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    SQL
+                </div>
+
+                <h3>
+                    SQL
+                </h3>
+
+                <p>
+                    Data Query & Analysis
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    BI
+                </div>
+
+                <h3>
+                    Power BI
+                </h3>
+
+                <p>
+                    Interactive Dashboards
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    Ex
+                </div>
+
+                <h3>
+                    Excel
+                </h3>
+
+                <p>
+                    Dashboard & Visualization
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    Pd
+                </div>
+
+                <h3>
+                    Pandas
+                </h3>
+
+                <p>
+                    Data Cleaning & Manipulation
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    Np
+                </div>
+
+                <h3>
+                    NumPy
+                </h3>
+
+                <p>
+                    Numerical Processing
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    M
+                </div>
+
+                <h3>
+                    Matplotlib
+                </h3>
+
+                <p>
+                    Data Visualization
+                </p>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-icon">
+                    S
+                </div>
+
+                <h3>
+                    Seaborn
+                </h3>
+
+                <p>
+                    Statistical Visualization
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     PROJECTS
+======================================================== -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Portfolio Showcase
+            </div>
+
+            <h2>
+                Featured Projects
+            </h2>
+
+            <p>
+                A selection of my data analytics dashboards and
+                application work.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img
+                        src="Screenshot 2026-09-17 155029.png"
+                        alt="Power BI dashboard">
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-tag">
+                        POWER BI
+                    </div>
+
+                    <h3>
+                        Business Analytics Dashboard
+                    </h3>
+
+                    <p>
+                        Interactive dashboard with KPIs, charts,
+                        filters and business insights.
+                    </p>
+
+                    <div class="project-actions">
+
+                        <a
+                            href="#contact"
+                            class="project-link">
+                            Project Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img
+                        src="Screenshot 2026-09-17 155400.png"
+                        alt="Power BI dashboard">
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-tag">
+                        POWER BI
+                    </div>
+
+                    <h3>
+                        Data Visualization Dashboard
+                    </h3>
+
+                    <p>
+                        Visual reporting dashboard designed to make
+                        complex data easier to understand.
+                    </p>
+
+                    <div class="project-actions">
+
+                        <a
+                            href="#contact"
+                            class="project-link">
+                            Project Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img
+                        src="Screenshot 2026-09-17 155649.png"
+                        alt="Analytics dashboard">
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-tag">
+                        DATA ANALYTICS
+                    </div>
+
+                    <h3>
+                        Analytics Reporting
+                    </h3>
+
+                    <p>
+                        Dashboard project focused on reporting,
+                        analysis and visual insights.
+                    </p>
+
+                    <div class="project-actions">
+
+                        <a
+                            href="#contact"
+                            class="project-link">
+                            Project Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image">
+
+                    <img
+                        src="Screenshot 2026-09-17 155852.png"
+                        alt="Data dashboard">
+
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-tag">
+                        DATA VISUALIZATION
+                    </div>
+
+                    <h3>
+                        Interactive Data Dashboard
+                    </h3>
+
+                    <p>
+                        Interactive visual analytics project using
+                        charts, KPIs and filtering.
+                    </p>
+
+                    <div class="project-actions">
+
+                        <a
+                            href="#contact"
+                            class="project-link">
+                            Project Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             RAJ DATA ANALYZER
+        ================================================== -->
+
+        <div class="app-showcase reveal">
+
+            <div class="app-image">
+
+                <img
+                    src="aap.jpeg"
+                    alt="Raj Data Analyzer application">
+
+            </div>
+
+
+            <div class="app-content">
+
+                <div class="app-tag">
+                    PYTHON · STREAMLIT · DATA ANALYTICS
+                </div>
+
+                <h3>
+                    Raj Data Analyzer
+                </h3>
+
+                <p>
+                    A practical data analysis application designed
+                    to help users upload datasets, understand data
+                    quality, identify problems and explore visual
+                    insights.
+                </p>
+
+                <div class="app-buttons">
+
+                    <a
+                        href="https://raj-data-analyzer-acxo8aq844dxucc5rf9dm3.streamlit.app/"
+                        target="_blank"
+                        class="btn btn-gold">
+                        Live App
+                    </a>
+
+                    <a
+                        href="https://github.com/sar945945-debug/Raj-Data-Analyzer"
+                        target="_blank"
+                        class="btn btn-outline">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     EXPERIENCE
+======================================================== -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Experience
+            </div>
+
+            <h2>
+                Professional Experience
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-date">
+                    AI DATA ANNOTATION
+                </div>
+
+                <h3>
+                    RWS
+                </h3>
+
+                <p>
+                    AI data annotation, data validation and quality
+                    evaluation work.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-date">
+                    AI EVALUATION
+                </div>
+
+                <h3>
+                    Outlier
+                </h3>
+
+                <p>
+                    AI evaluation and quality-focused data tasks.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item reveal">
+
+                <div class="timeline-date">
+                    DATA ANNOTATION
+                </div>
+
+                <h3>
+                    Appen
+                </h3>
+
+                <p>
+                    Data annotation and data quality related work.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     EDUCATION
+======================================================== -->
+
+<section class="education" id="education">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Education
+            </div>
+
+            <h2>
+                Academic Background
+            </h2>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+            <div class="education-card reveal">
+
+                <div class="education-year">
+                    PURSUING
+                </div>
+
+                <h3>
+                    B.A.
+                </h3>
+
+                <p>
+                    Maharshi Dayanand Saraswati University,
+                    Ajmer
+                </p>
+
+            </div>
+
+
+            <div class="education-card reveal">
+
+                <div class="education-year">
+                    2023
+                </div>
+
+                <h3>
+                    12th – Agriculture
+                </h3>
+
+                <p>
+                    RBSE
+                </p>
+
+            </div>
+
+
+            <div class="education-card reveal">
+
+                <div class="education-year">
+                    2021
+                </div>
+
+                <h3>
+                    10th
+                </h3>
+
+                <p>
+                    RBSE
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     CERTIFICATE
+======================================================== -->
+
+<section id="certificate">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Certification
+            </div>
+
+            <h2>
+                Data Analytics Certification
+            </h2>
+
+        </div>
+
+
+        <div class="certificate-grid">
+
+
+            <div class="certificate-preview reveal">
+
+                <iframe
+                    src="Certificate Format.pdf"
+                    title="Data Analytics Certificate">
+                </iframe>
+
+            </div>
+
+
+            <div class="certificate-content reveal">
+
+                <h3>
+                    Data Analytics Training
+                </h3>
+
+                <p>
+                    Successfully completed training in Data Analytics
+                    at Mastercode Infotech, Hadapsar, Pune,
+                    Maharashtra.
+                </p>
+
+                <div class="certificate-id">
+                    Certificate ID: MCI-RAJ-2210
+                </div>
+
+                <br>
+
+                <a
+                    href="Certificate Format.pdf"
+                    target="_blank"
+                    class="btn btn-gold">
+                    View Certificate
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     RESUME
+======================================================== -->
+
+<section class="resume-section">
+
+    <div class="container">
+
+        <div class="resume-box reveal">
+
+            <div>
+
+                <h2>
+                    Want to know more about my work?
+                </h2>
+
+                <p>
+                    View my complete professional resume.
+                </p>
+
+            </div>
+
+
+            <a
+                href="RAJPAL RESUME PRIMUME.pdf"
+                target="_blank"
+                class="btn btn-gold">
+                Open Resume
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     CONTACT
+======================================================== -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <div class="section-label">
+                Contact
+            </div>
+
+            <h2>
+                Let's Connect
+            </h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info reveal">
+
+                <h3>
+                    Get In Touch
+                </h3>
+
+                <p>
+                    For professional opportunities, projects,
+                    collaborations or data analytics work.
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        @
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <a
+                            href="mailto:rajpal492518@gmail.com">
+                            rajpal492518@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <a
+                            href="tel:8949692210">
+                            8949692210
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        IN
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <span>
+                            Nagaur, Rajasthan, India
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="socials">
+
+                    <a
+                        href="https://www.linkedin.com/in/rajpal-rajpal-8a545a323"
+                        target="_blank"
+                        class="social-link">
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://github.com/sar945945-debug"
+                        target="_blank"
+                        class="social-link">
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/raj_choudhary__0044"
+                        target="_blank"
+                        class="social-link">
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.naukri.com/"
+                        target="_blank"
+                        class="social-link">
+                        Naukri
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card reveal">
+
+                <h3>
+                    Explore My Work
+                </h3>
+
+                <p>
+                    Visit my GitHub profile to explore my projects,
+                    code and development work.
+                </p>
+
+                <a
+                    href="https://github.com/sar945945-debug"
+                    target="_blank"
+                    class="btn btn-gold">
+                    Visit GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     FOOTER
+======================================================== -->
+
+<footer>
+
+    <p>
+        © 2026
+        <strong>Rajpal</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Data Analyst
+        <span class="footer-gold">•</span>
+        App Developer
+    </p>
+
+</footer>
+
+
+<!-- =======================================================
+     JAVASCRIPT
+======================================================== -->
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const navLinks =
+    document.getElementById("navLinks");
+
+
+menuButton.addEventListener(
+    "click",
+    function(){
+
+        navLinks.classList.toggle("active");
+
+    }
+);
+
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link){
+
+        link.addEventListener(
+            "click",
+            function(){
+
+                navLinks.classList.remove("active");
+
+            }
+        );
+
+    });
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+        function(entries){
+
+            entries.forEach(
+                function(entry){
+
+                    if(entry.isIntersecting){
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:.12
+        }
+    );
+
+
+revealElements.forEach(
+    function(element){
+
+        revealObserver.observe(element);
+
+    }
+);
+
+
+/* =========================================================
+   AUDIO SYSTEM
+========================================================= */
+
+let audioContext = null;
+
+let audioUnlocked = false;
+
+let lastSoundTime = 0;
+
+
+/* Create audio context */
+
+function unlockAudio(){
+
+    if(audioUnlocked){
+        return;
+    }
+
+    const AudioContext =
+        window.AudioContext ||
+        window.webkitAudioContext;
+
+    if(!AudioContext){
+        return;
+    }
+
+    try{
+
+        audioContext =
+            new AudioContext();
+
+        if(
+            audioContext.state ===
+            "suspended"
+        ){
+
+            audioContext.resume();
+
+        }
+
+        audioUnlocked = true;
+
+    }catch(error){
+
+        audioUnlocked = false;
+
+    }
+
+}
+
+
+/* =========================================================
+   TOUCH SOUND
+========================================================= */
+
+function playTouchSound(){
+
+    if(
+        !audioUnlocked ||
+        !audioContext
+    ){
+
+        return;
+
+    }
+
+
+    const currentTime =
+        performance.now();
+
+
+    /* Prevent accidental double sound */
+
+    if(
+        currentTime - lastSoundTime <
+        70
+    ){
+
+        return;
+
+    }
+
+
+    lastSoundTime =
+        currentTime;
+
+
+    const now =
+        audioContext.currentTime;
+
+
+    const oscillator =
+        audioContext.createOscillator();
+
+
+    const gain =
+        audioContext.createGain();
+
+
+    oscillator.type =
+        "sine";
+
+
+    oscillator.frequency.setValueAtTime(
+        620,
+        now
+    );
+
+
+    oscillator.frequency.exponentialRampToValueAtTime(
+        900,
+        now + .055
+    );
+
+
+    gain.gain.setValueAtTime(
+        .0001,
+        now
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        .035,
+        now + .008
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        .0001,
+        now + .11
+    );
+
+
+    oscillator.connect(gain);
+
+    gain.connect(
+        audioContext.destination
+    );
+
+
+    oscillator.start(now);
+
+    oscillator.stop(
+        now + .12
+    );
+
+}
+
+
+/* =========================================================
+   STARTUP TUNE
+========================================================= */
+
+let startupPlayed =
+    false;
+
+
+function playStartupTune(){
+
+    if(
+        startupPlayed ||
+        !audioUnlocked ||
+        !audioContext
+    ){
+
+        return;
+
+    }
+
+
+    startupPlayed =
+        true;
+
+
+    const notes = [
+
+        {
+            frequency:523.25,
+            time:0
+        },
+
+        {
+            frequency:659.25,
+            time:.12
+        },
+
+        {
+            frequency:783.99,
+            time:.24
+        },
+
+        {
+            frequency:1046.50,
+            time:.38
+        }
+
+    ];
+
+
+    notes.forEach(
+        function(note){
+
+            const oscillator =
+                audioContext.createOscillator();
+
+
+            const gain =
+                audioContext.createGain();
+
+
+            const startTime =
+                audioContext.currentTime +
+                note.time;
+
+
+            oscillator.type =
+                "sine";
+
+
+            oscillator.frequency.setValueAtTime(
+                note.frequency,
+                startTime
+            );
+
+
+            gain.gain.setValueAtTime(
+                .0001,
+                startTime
+            );
+
+
+            gain.gain.exponentialRampToValueAtTime(
+                .045,
+                startTime + .02
+            );
+
+
+            gain.gain.exponentialRampToValueAtTime(
+                .0001,
+                startTime + .55
+            );
+
+
+            oscillator.connect(gain);
+
+            gain.connect(
+                audioContext.destination
+            );
+
+
+            oscillator.start(
+                startTime
+            );
+
+
+            oscillator.stop(
+                startTime + .6
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   FIRST USER TOUCH
+========================================================= */
+
+document.addEventListener(
+    "pointerdown",
+    function(){
+
+        unlockAudio();
+
+        if(!startupPlayed){
+
+            setTimeout(
+                playStartupTune,
+                80
+            );
+
+        }
+
+    },
+    {
+        once:true
+    }
+);
+
+
+/* =========================================================
+   SOUND ON EVERY USEFUL TOUCH
+========================================================= */
+
+document.addEventListener(
+    "pointerdown",
+    function(event){
+
+        const interactive =
+            event.target.closest(
+                "a, button, .skill-card, .project-card, .education-card, .info-box"
+            );
+
+
+        if(!interactive){
+            return;
+        }
+
+
+        unlockAudio();
+
+        playTouchSound();
+
+    }
+);
+
+
+/* =========================================================
+   GOLD TOUCH RIPPLE
+========================================================= */
+
+document.addEventListener(
+    "pointerdown",
+    function(event){
+
+        const interactive =
+            event.target.closest(
+                "a, button, .skill-card, .project-card, .education-card, .info-box"
+            );
+
+
+        if(!interactive){
+            return;
+        }
+
+
+        const ripple =
+            document.createElement("span");
+
+
+        ripple.className =
+            "touch-ripple";
+
+
+        ripple.style.left =
+            event.clientX + "px";
+
+
+        ripple.style.top =
+            event.clientY + "px";
+
+
+        document.body.appendChild(
+            ripple
+        );
+
+
+        setTimeout(
+            function(){
+
+                ripple.remove();
+
+            },
+            500
+        );
+
+    }
+);
+
+
+/* =========================================================
+   KEYBOARD ACCESS
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        if(
+            event.key === "Escape"
+        ){
+
+            navLinks.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
